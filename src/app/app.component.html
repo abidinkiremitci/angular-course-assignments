@@ -1,2 +1,14 @@
+<app-alert></app-alert>
+
 <h3>{{title}}</h3>
+
+<div>
+  <input type="text" [(ngModel)]="message">
+</div>
+
+<div>
+  <button class="btn btn-success m-1" (click)="alertService.success(message)">Success</button>
+  <button class="btn btn-warning m-1" (click)="alertService.warn(message)">Warn</button>
+</div>
+
 <router-outlet></router-outlet>

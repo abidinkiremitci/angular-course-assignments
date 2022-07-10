@@ -1,0 +1,4 @@
+<div *ngFor="let alert of (alerts$ | async)" class="{{cssClass(alert)}}">
+  <a class="close" (click)="alertService.remove(alert.id)">&times;</a>
+  <span [innerHTML]="alert.message"></span>
+</div>
